@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="/upload/"  enctype="multipart/form-data" method="POST">
+            {% csrf_token %} 
+            {{ form.file }} 
+            <button type='submit'>Submit</button>
+        </form>
+        
+    </body>
+</html>
